@@ -6,6 +6,8 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
+@class SharedCodeAOProduct;
+
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunknown-warning-option"
@@ -146,6 +148,27 @@ __attribute__((swift_name("KotlinBoolean")))
 @interface SharedCodeBoolean : SharedCodeNumber
 - (instancetype)initWithBool:(BOOL)value;
 + (instancetype)numberWithBool:(BOOL)value;
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AOProduct")))
+@interface SharedCodeAOProduct : KotlinBase
+- (instancetype)initWithName:(NSString *)name
+                   productID:(NSString *)productID
+         analyticsIdentifier:(NSString *)analyticsIdentifier
+                  productURL:(NSString *)productURL __attribute__((swift_name("init(name:productID:analyticsIdentifier:productURL:)"))) __attribute__((objc_designated_initializer));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+- (NSString *)component2 __attribute__((swift_name("component2()")));
+- (NSString *)component3 __attribute__((swift_name("component3()")));
+- (NSString *)component4 __attribute__((swift_name("component4()")));
+- (SharedCodeAOProduct *)doCopyName:(NSString *)name productID:(NSString *)productID analyticsIdentifier:(NSString *)analyticsIdentifier productURL:(NSString *)productURL __attribute__((swift_name("doCopy(name:productID:analyticsIdentifier:productURL:)")));
+@property (readonly) NSString *name __attribute__((swift_name("name")));
+@property (readonly) NSString *productID __attribute__((swift_name("productID")));
+@property (readonly) NSString *analyticsIdentifier __attribute__((swift_name("analyticsIdentifier")));
+@property (readonly) NSString *productURL __attribute__((swift_name("productURL")));
 @end;
 
 __attribute__((objc_subclassing_restricted))

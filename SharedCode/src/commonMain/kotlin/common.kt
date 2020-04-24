@@ -6,3 +6,8 @@ fun createApplicationScreenMessage(): String {
     return "Kotlin Rocks on ${platformName()}"
 }
 
+data class AOProduct(
+    val name:String,
+    val productID: String,
+    val analyticsIdentifier: String,
+    val productURL: String)
