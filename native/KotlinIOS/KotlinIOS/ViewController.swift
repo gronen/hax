@@ -11,5 +11,11 @@ class ViewController: UIViewController {
         label.font = label.font.withSize(25)
         label.text = CommonKt.createApplicationScreenMessage()
         view.addSubview(label)
+        
+        let product = AOProduct(name: "Checking",
+                                productID: "4000",
+                                analyticsIdentifier: "360checking",
+                                productURL: "tbd")
+        NSLog("%@", product)
     }
 }
